@@ -1,0 +1,27 @@
+@import "./assets/css/reset.scss";
+
+@theme {
+  --color-nav: #082032;
+  --color-orange: #f87b1b;
+}
+
+body {
+  background-color: #082032;
+  color: #fff;
+  em {
+    font-style: normal;
+  }
+
+  #intro,
+  #core-value,
+  #skill,
+  #career,
+  #project,
+  #ending {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: calc(var(--spacing) * 30);
+  }
+}
