@@ -1,4 +1,5 @@
 import Badge from "./components/Badge";
+import SecitonTitle from "./components/SecitonTitle";
 
 interface CoreValue {
   id: number;
@@ -11,6 +12,15 @@ interface Skills {
   id: number;
   category: string;
   content: string;
+}
+
+interface Career {
+  id: number;
+  category: string;
+  period: string;
+  title: string;
+  sub: string;
+  work?: string[];
 }
 
 const coreValues: CoreValue[] = [
@@ -55,6 +65,29 @@ const skills: Skills[] = [
   },
 ];
 
+const career: Career[] = [
+  {
+    id: 1,
+    category: "career",
+    period: "2023.12 ~ 2025.06",
+    title: "호텔스토리",
+    sub: "연구개발실 BX팀 Frontend Developer",
+    work: [
+      "관리자 페이지 및 신규 프로젝트 프론트엔드 개발 및 고도화",
+      "백엔드 API 연동 및 데이터 가공 처리",
+      "공통 UI 컴포넌트 설계 및 제작, 문서화",
+      "유지보수 및 사용자 요구사항 기반 기능 개선",
+    ],
+  },
+  {
+    id: 2,
+    category: "education",
+    period: "2023.02 ~ 2023.08",
+    title: "그린컴퓨터아카데미학원",
+    sub: "웹 퍼블리셔 & 리액트 활용 프론트엔드 웹 SW 개발자 과정",
+  },
+];
+
 export default function Home() {
   return (
     <main className="w-full max-w-7xl">
@@ -69,7 +102,7 @@ export default function Home() {
       </section>
       <section id="core-value" className="border border-white">
         <div className="flex flex-col items-center justify-center">
-          <h3 className="text-4xl font-bold mb-15 text-orange-400">핵심역량</h3>
+          <SecitonTitle>핵심역량</SecitonTitle>
           <div className="grid grid-cols-3 gap-10">
             {coreValues.map((el) => (
               <div key={el.id} className="flex flex-col gap-3">
@@ -83,7 +116,7 @@ export default function Home() {
       </section>
       <section id="skill" className="border border-white">
         <div className="w-full flex flex-col items-center justify-center">
-          <h3 className="text-4xl font-bold mb-15 text-orange-400">기술스택</h3>
+          <SecitonTitle>기술스택</SecitonTitle>
           <div className="w-full max-w-[60%] flex flex-col gap-15">
             {skills.map((el) => (
               <div className="flex flex-col items-center relative">
@@ -99,10 +132,78 @@ export default function Home() {
         </div>
       </section>
       <section id="career" className="border border-white">
-        career
+        <div className="w-full flex flex-col items-center justify-center">
+          <SecitonTitle>경력 및 교육</SecitonTitle>
+          <div className="w-full max-w-[60%]">
+            <div className="relative border-t border-white mb-20">
+              <p className="absolute bg-[#082032] py-1 px-5 -top-4 left-1/2 -translate-x-1/2">
+                실무
+              </p>
+              <ul className="pt-10 flex flex-col gap-10">
+                {career
+                  .filter((el) => el.category === "career")
+                  .map((career) => (
+                    <li className="flex gap-10 sborder border-white ">
+                      <p>{career.period}</p>
+                      <div className="flex flex-col gap-3">
+                        <p className="text-2xl">{career.title}</p>
+                        <p className="text-[#A5A5A5] text-[0.8rem]">
+                          {career.sub}
+                        </p>
+                        {career.work && (
+                          <div>
+                            <p className="text-orange-400 mb-3 font-semibold text-[0.8rem]">
+                              주요업무
+                            </p>
+                            <ul className="text-[0.8rem] bg-[#555555]/30 py-4 px-6 rounded-2xl leading-6">
+                              {career.work.map((work) => (
+                                <li>{work}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+            <div className="border-t border-white relative">
+              <p className="absolute bg-[#082032] py-1 px-5 -top-4 left-1/2 -translate-x-1/2">
+                교육
+              </p>
+              <ul className="pt-10 flex flex-col gap-10">
+                {career
+                  .filter((el) => el.category === "education")
+                  .map((career) => (
+                    <li className="flex gap-10 sborder border-white ">
+                      <p>{career.period}</p>
+                      <div className="flex flex-col gap-3">
+                        <p className="text-2xl">{career.title}</p>
+                        <p className="text-[#A5A5A5] text-[0.8rem]">
+                          {career.sub}
+                        </p>
+                        {career.work && (
+                          <div>
+                            <p className="text-orange-400 mb-3 font-semibold text-[0.8rem]">
+                              주요업무
+                            </p>
+                            <ul className="text-[0.8rem] bg-[#555555]/30 py-4 px-6 rounded-2xl leading-6">
+                              {career.work.map((work) => (
+                                <li>{work}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="project" className="border border-white">
-        project
+        <SecitonTitle>프로젝트</SecitonTitle>
       </section>
       <section id="ending" className="border border-white">
         ending
