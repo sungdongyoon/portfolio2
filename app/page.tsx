@@ -23,6 +23,16 @@ interface Career {
   work?: string[];
 }
 
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  period: string;
+  link: string;
+  skills: { name: string; image: string }[];
+  details: string[];
+}
+
 const coreValues: CoreValue[] = [
   {
     id: 1,
@@ -85,6 +95,31 @@ const career: Career[] = [
     period: "2023.02 ~ 2023.08",
     title: "그린컴퓨터아카데미학원",
     sub: "웹 퍼블리셔 & 리액트 활용 프론트엔드 웹 SW 개발자 과정",
+  },
+];
+
+const projects: Project[] = [
+  {
+    id: 1,
+    title: "Next js 기반 웹사이트 개발 및 유지보수",
+    description: "코드스테이츠 홈페이지 유지보수 및 리뉴얼 업무",
+    period: "2024.01 ~ 2024.03",
+    link: "",
+    skills: [
+      {
+        name: "React",
+        image: "",
+      },
+      {
+        name: "Next.js",
+        image: "",
+      },
+      {
+        name: "Python",
+        image: "",
+      },
+    ],
+    details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
   },
 ];
 
@@ -203,10 +238,36 @@ export default function Home() {
         </div>
       </section>
       <section id="project" className="border border-white">
-        <SecitonTitle>프로젝트</SecitonTitle>
+        <div className="w-full flex flex-col items-center justify-center">
+          <SecitonTitle>프로젝트</SecitonTitle>
+          <div className="w-full max-w-[60%] grid grid-cols-3 gap-5">
+            {projects.map((el) => (
+              <div className="bg-[#555555]/30 rounded-2xl p-6">
+                <p className="text-[1.2rem] mb-2">{el.title}</p>
+                <p className="text-[0.8rem] text-[#A5A5A5] mb-12">
+                  {el.description}
+                </p>
+                <div className="flex gap-3">
+                  {el.skills.map((skill) => (
+                    <div className="bg-white rounded-[3px] w-7 aspect-square"></div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
       <section id="ending" className="border border-white">
-        ending
+        <div className="w-full flex flex-col items-center justify-center">
+          <p className="text-center text-xl mb-10">
+            고객들에게 보다 더 좋은 서비스를 제공하기 위해,
+            <br />
+            회사와 함께 발전해나가기 위해,
+            <br />
+            열정과 호기심을 바탕으로 성장해나가는 개발자가 되겠습니다.
+          </p>
+          <p className="text-3xl font-bold">감사합니다.</p>
+        </div>
       </section>
     </main>
   );
