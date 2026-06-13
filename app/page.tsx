@@ -37,23 +37,23 @@ const coreValues: CoreValue[] = [
   {
     id: 1,
     image: "",
-    title: "모던 프론트엔드 개발",
+    title: "커뮤니케이션",
     content:
-      "React.js를 이용한 프론트엔드 개발 경험이 있으며, JavaScript(ES6), TypeScript에 능숙합니다. Next.js와 더불어 핵심적인 React 라이브러리 활용 경험이 있습니다.",
+      "함께 일하는 과정에서 가장 중요한 요소 중 하나가 커뮤니케이션이라고 생각합니다. 원활한 협업을 위해 자신의 의견을 명확하게 전달하는 것 뿐만 아니라 상대방을 이해하고 배려하는 태도가 중요하다고 생각합니다. 겸손한 자세로 피드백을 받아들이고, 약속한 일정과 역할을 책임감을 갖고 지키려고 노력합니다.",
   },
   {
     id: 2,
     image: "",
-    title: "사용자 중심 UI 구현",
+    title: "근거있는 행동",
     content:
-      "사용자가 이해하기 쉽고 편하게 사용할 수 있는 인터페이스를 고민하며, 반응형 UI와 접근성을 고려한 화면 구현을 지향합니다.",
+      "추측이나 감에 의존하는 것보다 사실과 근거를 바탕으로 판단하고 행동하는 것을 중요하게 생각합니다. 명확한 이유와 근거를 바탕으로 소통할 때 팀원 간의 신뢰가 높아지고 더 나은 의사결정을 할 수 있다고 믿습니다.",
   },
   {
     id: 3,
     image: "",
-    title: "지속적인 개선과 성장",
+    title: "책임감",
     content:
-      "문제를 단순히 해결하는 것에 그치지 않고, 더 나은 구조와 유지보수성을 고민하며 꾸준히 학습하고 개선합니다.",
+      "민폐 끼치는 것을 싫어합니다. 때문에 저는 책임감을 갖고 맡은 일을 완수하기 위해 많은 고민을 하고 자기개발을 통해 부족한 부분을 개선하기 위해 노력합니다. 또한 동료의 도움이 필요할 경우 도움을 요청하여 더 나은 결과를 만들기 위해 노력합니다.",
   },
 ];
 
@@ -137,7 +137,7 @@ export default function Home() {
       </section>
       <section id="core-value" className="border border-white">
         <div className="flex flex-col items-center justify-center">
-          <SecitonTitle>핵심역량</SecitonTitle>
+          <SecitonTitle>3가지 철학</SecitonTitle>
           <div className="grid grid-cols-3 gap-10">
             {coreValues.map((el) => (
               <div key={el.id} className="flex flex-col gap-3">
