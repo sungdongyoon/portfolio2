@@ -23,6 +23,7 @@ export interface Career {
 export interface Project {
   id: number;
   title: string;
+  type: "개인" | "호텔스토리";
   description: string;
   period: string;
   link: string;

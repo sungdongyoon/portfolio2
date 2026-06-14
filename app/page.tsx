@@ -1,8 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import Badge from "./components/Badge";
 import SectionTitle from "./components/SectionTitle";
 import { career, coreValues, projects, skills } from "./constants/portfolio";
 
 export default function Home() {
+  const [isWork, setIsWork] = useState<boolean>(false);
+
   return (
     <main className="w-full max-w-7xl">
       <section id="intro" className="min-h-dvh px-5">
@@ -138,7 +143,10 @@ export default function Home() {
           <div className="w-full max-w-full md:max-w-[80%] lg:max-w-[60%] grid grid-cols-1 md:grid-cols-2 gap-5">
             {projects.map((el) => (
               <div className="bg-[#555555]/30 rounded-2xl p-6" key={el.id}>
-                <p className="text-[1rem] lg:text-xl mb-2">{el.title}</p>
+                <p className="text-[1rem] lg:text-xl">{el.title}</p>
+                <Badge size="xs" className="mt-1 mb-4 bg-red-500 text-white">
+                  {el.type}
+                </Badge>
                 <p className="text-[0.8rem] text-[#A5A5A5] mb-12">
                   {el.description}
                 </p>

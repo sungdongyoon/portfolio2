@@ -68,21 +68,15 @@ export const career: Career[] = [
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Next js 기반 웹사이트 개발 및 유지보수",
-    description: "코드스테이츠 홈페이지 유지보수 및 리뉴얼 업무",
+    title: "상세페이지 템플릿 시스템",
+    type: "호텔스토리",
+    description:
+      "사내 플랫폼에서 상품 판매 상세페이지를 생성할 때 사용하는 템플릿 제작 시스템",
     period: "2024.01 ~ 2024.03",
     link: "",
     skills: [
       {
         name: "React",
-        image: "",
-      },
-      {
-        name: "Next.js",
-        image: "",
-      },
-      {
-        name: "Python",
         image: "",
       },
     ],
@@ -90,21 +84,15 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Next js 기반 웹사이트 개발 및 유지보수",
-    description: "코드스테이츠 홈페이지 유지보수 및 리뉴얼 업무",
-    period: "2024.01 ~ 2024.03",
+    title: "UI Components",
+    type: "호텔스토리",
+    description:
+      "사내 개발자용으로 모든 개발자들이 쉽고 간편하게 화면 작업을 할 수 있도록 제작한 UI 컴포넌트",
+    period: "2024.05 ~ 상시",
     link: "",
     skills: [
       {
-        name: "React",
-        image: "",
-      },
-      {
         name: "Next.js",
-        image: "",
-      },
-      {
-        name: "Python",
         image: "",
       },
     ],
@@ -112,21 +100,15 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Next js 기반 웹사이트 개발 및 유지보수",
-    description: "코드스테이츠 홈페이지 유지보수 및 리뉴얼 업무",
-    period: "2024.01 ~ 2024.03",
+    title: "TMS(Ticket Management System)",
+    type: "호텔스토리",
+    description:
+      "티켓 예약 관리, 티켓 사용처리, 티켓 취소처리 등의 티켓 관련된 업무를 쉽게 관리할 수 있는 티켓 관리 시스템",
+    period: "2024.12 ~ 2025.06",
     link: "",
     skills: [
       {
-        name: "React",
-        image: "",
-      },
-      {
         name: "Next.js",
-        image: "",
-      },
-      {
-        name: "Python",
         image: "",
       },
     ],
@@ -134,21 +116,15 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Next js 기반 웹사이트 개발 및 유지보수",
-    description: "코드스테이츠 홈페이지 유지보수 및 리뉴얼 업무",
-    period: "2024.01 ~ 2024.03",
+    title: "신규 부킹엔진",
+    type: "호텔스토리",
+    description:
+      "호텔스토리에서 자체 개발한 숙소 예약 시스템(MRI 사이판 및 CJ 홈쇼핑 판매 목적으로 신규버전 제작)",
+    period: "2025.03 ~ 2025.06",
     link: "",
     skills: [
       {
-        name: "React",
-        image: "",
-      },
-      {
         name: "Next.js",
-        image: "",
-      },
-      {
-        name: "Python",
         image: "",
       },
     ],
@@ -156,21 +132,14 @@ export const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Next js 기반 웹사이트 개발 및 유지보수",
-    description: "코드스테이츠 홈페이지 유지보수 및 리뉴얼 업무",
-    period: "2024.01 ~ 2024.03",
+    title: "개인 프로젝트 1",
+    type: "개인",
+    description: "개인 프로젝트 1입니다.",
+    period: "2026.06 ~ 2026.06",
     link: "",
     skills: [
       {
-        name: "React",
-        image: "",
-      },
-      {
         name: "Next.js",
-        image: "",
-      },
-      {
-        name: "Python",
         image: "",
       },
     ],
