@@ -88,4 +88,92 @@ export const projects: Project[] = [
     ],
     details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
   },
+  {
+    id: 2,
+    title: "Next js 기반 웹사이트 개발 및 유지보수",
+    description: "코드스테이츠 홈페이지 유지보수 및 리뉴얼 업무",
+    period: "2024.01 ~ 2024.03",
+    link: "",
+    skills: [
+      {
+        name: "React",
+        image: "",
+      },
+      {
+        name: "Next.js",
+        image: "",
+      },
+      {
+        name: "Python",
+        image: "",
+      },
+    ],
+    details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
+  },
+  {
+    id: 3,
+    title: "Next js 기반 웹사이트 개발 및 유지보수",
+    description: "코드스테이츠 홈페이지 유지보수 및 리뉴얼 업무",
+    period: "2024.01 ~ 2024.03",
+    link: "",
+    skills: [
+      {
+        name: "React",
+        image: "",
+      },
+      {
+        name: "Next.js",
+        image: "",
+      },
+      {
+        name: "Python",
+        image: "",
+      },
+    ],
+    details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
+  },
+  {
+    id: 4,
+    title: "Next js 기반 웹사이트 개발 및 유지보수",
+    description: "코드스테이츠 홈페이지 유지보수 및 리뉴얼 업무",
+    period: "2024.01 ~ 2024.03",
+    link: "",
+    skills: [
+      {
+        name: "React",
+        image: "",
+      },
+      {
+        name: "Next.js",
+        image: "",
+      },
+      {
+        name: "Python",
+        image: "",
+      },
+    ],
+    details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
+  },
+  {
+    id: 5,
+    title: "Next js 기반 웹사이트 개발 및 유지보수",
+    description: "코드스테이츠 홈페이지 유지보수 및 리뉴얼 업무",
+    period: "2024.01 ~ 2024.03",
+    link: "",
+    skills: [
+      {
+        name: "React",
+        image: "",
+      },
+      {
+        name: "Next.js",
+        image: "",
+      },
+      {
+        name: "Python",
+        image: "",
+      },
+    ],
+    details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
+  },
 ];
