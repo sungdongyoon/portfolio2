@@ -46,22 +46,46 @@ export const career: Career[] = [
   {
     id: 1,
     category: "career",
-    period: "2023.12 ~ 2025.06",
-    title: "호텔스토리",
-    sub: "연구개발실 BX팀 Frontend Developer",
-    work: [
-      "관리자 페이지 및 신규 프로젝트 프론트엔드 개발 및 고도화",
-      "백엔드 API 연동 및 데이터 가공 처리",
-      "공통 UI 컴포넌트 설계 및 제작, 문서화",
-      "유지보수 및 사용자 요구사항 기반 기능 개선",
+    title: "경력",
+    content: [
+      {
+        id: "carrer1",
+        period: "2023.12 ~ 2025.06",
+        title: "호텔스토리",
+        sub: "연구개발실 BX팀 Frontend Developer",
+        work: [
+          "관리자 페이지 및 신규 프로젝트 프론트엔드 개발 및 고도화",
+          "백엔드 API 연동 및 데이터 가공 처리",
+          "공통 UI 컴포넌트 설계 및 제작, 문서화",
+          "유지보수 및 사용자 요구사항 기반 기능 개선",
+        ],
+      },
     ],
   },
   {
     id: 2,
     category: "education",
-    period: "2023.02 ~ 2023.08",
-    title: "그린컴퓨터아카데미학원",
-    sub: "웹 퍼블리셔 & 리액트 활용 프론트엔드 웹 SW 개발자 과정",
+    title: "교육",
+    content: [
+      {
+        id: "edu1",
+        period: "2023.02 ~ 2023.08",
+        title: "그린컴퓨터아카데미학원",
+        sub: "웹 퍼블리셔 & 리액트 활용 프론트엔드 웹 SW 개발자 과정",
+      },
+    ],
+  },
+  {
+    id: 3,
+    category: "certificate",
+    title: "자격",
+    content: [
+      {
+        id: "certificate1",
+        period: "2026.06",
+        title: "SQLD",
+      },
+    ],
   },
 ];
 

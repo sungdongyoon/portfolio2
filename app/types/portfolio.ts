@@ -14,10 +14,16 @@ export interface Skills {
 export interface Career {
   id: number;
   category: string;
-  period: string;
   title: string;
-  sub: string;
-  work?: string[];
+  content: [
+    {
+      id: string;
+      period: string;
+      title: string;
+      sub?: string;
+      work?: string[];
+    },
+  ];
 }
 
 export interface Project {
