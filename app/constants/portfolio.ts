@@ -28,17 +28,17 @@ export const skills: Skills[] = [
   {
     id: 1,
     category: "FRONTEND",
-    content: "TS · JS · React · Next · Flutter · Dart",
+    content: "Javascript · Typescript · React · Next.js",
   },
   {
     id: 2,
     category: "BACKEND",
-    content: "TS · JS · React · Next · Flutter · Dart",
+    content: "SQL · Supabase",
   },
   {
     id: 3,
     category: "OTHERS",
-    content: "TS · JS · React · Next · Flutter · Dart",
+    content: "AWS S3 · AWS Amplify · Vercel · Github · Figma",
   },
 ];
 

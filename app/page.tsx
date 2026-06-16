@@ -1,27 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Badge from "./components/Badge";
 import SectionTitle from "./components/SectionTitle";
 import { career, coreValues, projects, skills } from "./constants/portfolio";
+import * as motion from "motion/react-client";
 import ProjectModal from "./components/ProjectModal";
+import { useInView, useScroll } from "motion/react";
+import { sectionAnimation } from "./constants/animations";
+import Section from "./components/Section";
 
 export default function Home() {
   const [isWork, setIsWork] = useState<boolean>(false);
   const [isProject, setIsProject] = useState<boolean>(false);
 
   return (
-    <main className="w-full max-w-7xl">
+    <main className="w-full max-w-5xl">
       <section id="intro" className="min-h-dvh px-5">
         <div className="flex flex-col items-center justify-center text-center">
           <h1 className="text-[clamp(2.5rem,6vw,4rem)] font-bold">
             안녕하세요,
             <br /> 프론트엔드 개발자
-            <br /> <em className="text-orange-400">윤동성</em>입니다.
+            <br /> <em className="text-orange-400">윤동성</em>
+            입니다.
           </h1>
         </div>
       </section>
-      <section id="core-value" className="px-5 sm:px-7 lg:px-10">
+      <Section id="core-value" {...sectionAnimation}>
         <div className="flex flex-col items-center justify-center">
           <SectionTitle>3가지 철학</SectionTitle>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -38,8 +43,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-      <section id="skill" className="px-5 sm:px-7 lg:px-10">
+      </Section>
+      <Section id="skill">
         <div className="w-full flex flex-col items-center justify-center">
           <SectionTitle>기술스택</SectionTitle>
           <div className="w-full max-w-full md:max-w-[60%] flex flex-col gap-15">
@@ -57,8 +62,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-      <section id="career" className="px-5 sm:px-7 lg:px-10">
+      </Section>
+      <Section id="career">
         <div className="w-full flex flex-col items-center justify-center">
           <SectionTitle>경력 및 교육</SectionTitle>
           <div className="w-full max-w-full md:max-w-[80%] lg:max-w-[60%]">
@@ -107,89 +112,10 @@ export default function Home() {
                 </ul>
               </div>
             ))}
-            {/* <div className="relative border-t border-white mb-20">
-              <p className="absolute bg-[#082032] py-1 px-5 -top-4 left-1/2 -translate-x-1/2">
-                실무
-              </p>
-              <ul className="pt-10 flex flex-col gap-10">
-                {career
-                  .filter((el) => el.category === "career")
-                  .map((career) => (
-                    <li
-                      className="flex flex-col sm:flex-row gap-3 sm:gap-10"
-                      key={career.id}
-                    >
-                      <p className="text-[0.8rem] sm:text-[1rem]">
-                        {career.period}
-                      </p>
-                      <div className="flex flex-col gap-2 sm:gap-3">
-                        <p className="text-2xl">{career.title}</p>
-                        <p className="text-[#A5A5A5] text-[0.7rem] sm:text-[0.8rem]">
-                          {career.sub}
-                        </p>
-                        {career.work && (
-                          <div>
-                            <button
-                              className="text-orange-400 font-semibold text-[0.8rem] cursor-pointer"
-                              onClick={() => setIsWork(!isWork)}
-                            >
-                              ► 주요업무
-                            </button>
-                            {isWork && (
-                              <ul className="text-[0.8rem] bg-[#555555]/30 py-4 px-6 mt-3 rounded-2xl leading-6">
-                                {career.work.map((work, idx) => (
-                                  <li key={idx}>- {work}</li>
-                                ))}
-                              </ul>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    </li>
-                  ))}
-              </ul>
-            </div>
-            <div className="border-t border-white relative">
-              <p className="absolute bg-[#082032] py-1 px-5 -top-4 left-1/2 -translate-x-1/2">
-                교육
-              </p>
-              <ul className="pt-10 flex flex-col gap-10">
-                {career
-                  .filter((el) => el.category === "education")
-                  .map((career) => (
-                    <li
-                      className="flex flex-col sm:flex-row gap-3 sm:gap-10"
-                      key={career.id}
-                    >
-                      <p className="text-[0.8rem] sm:text-[1rem]">
-                        {career.period}
-                      </p>
-                      <div className="flex flex-col gap-3">
-                        <p className="text-2xl">{career.title}</p>
-                        <p className="text-[#A5A5A5] text-[0.7rem] sm:text-[0.8rem]">
-                          {career.sub}
-                        </p>
-                        {career.work && (
-                          <div>
-                            <p className="text-orange-400 mb-3 font-semibold text-[0.8rem]">
-                              ► 주요업무
-                            </p>
-                            <ul className="text-[0.8rem] bg-[#555555]/30 py-4 px-6 rounded-2xl leading-6">
-                              {career.work.map((work) => (
-                                <li>{work}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                      </div>
-                    </li>
-                  ))}
-              </ul>
-            </div> */}
           </div>
         </div>
-      </section>
-      <section id="project" className="px-5 sm:px-7 lg:px-10">
+      </Section>
+      <Section id="project">
         <div className="w-full flex flex-col items-center justify-center">
           <SectionTitle>프로젝트</SectionTitle>
           <div className="w-full max-w-full md:max-w-[80%] lg:max-w-[60%] grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -218,8 +144,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-      <section id="ending" className="px-5 sm:px-7 lg:px-10">
+      </Section>
+      <Section id="ending">
         <div className="w-full flex flex-col items-center justify-center">
           <p className="text-center text-[1rem] lg:text-xl mb-10">
             고객들에게 보다 더 좋은 서비스를 제공하기 위해,
@@ -230,7 +156,7 @@ export default function Home() {
           </p>
           <p className="text-2xl lg:text-3xl font-bold">감사합니다.</p>
         </div>
-      </section>
+      </Section>
     </main>
   );
 }
