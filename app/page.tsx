@@ -9,6 +9,7 @@ import ProjectModal from "./components/ProjectModal";
 import { useInView, useScroll } from "motion/react";
 import { sectionAnimation } from "./constants/animations";
 import Section from "./components/Section";
+import Image from "next/image";
 
 export default function Home() {
   const [isWork, setIsWork] = useState<boolean>(false);
@@ -26,7 +27,7 @@ export default function Home() {
           </h1>
         </div>
       </section>
-      <Section id="core-value" {...sectionAnimation}>
+      <Section id="core-value" isAnimation>
         <div className="flex flex-col items-center justify-center">
           <SectionTitle>3가지 철학</SectionTitle>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -44,7 +45,7 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section id="skill">
+      <Section id="skill" isAnimation>
         <div className="w-full flex flex-col items-center justify-center">
           <SectionTitle>기술스택</SectionTitle>
           <div className="w-full max-w-full md:max-w-[60%] flex flex-col gap-15">
@@ -63,7 +64,7 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section id="career">
+      <Section id="career" isAnimation>
         <div className="w-full flex flex-col items-center justify-center">
           <SectionTitle>경력 및 교육</SectionTitle>
           <div className="w-full max-w-full md:max-w-[80%] lg:max-w-[60%]">
@@ -115,29 +116,37 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section id="project">
+      <Section id="project" isAnimation>
         <div className="w-full flex flex-col items-center justify-center">
           <SectionTitle>프로젝트</SectionTitle>
           <div className="w-full max-w-full md:max-w-[80%] lg:max-w-[60%] grid grid-cols-1 md:grid-cols-2 gap-5">
             {projects.map((el) => (
               <div
-                className="bg-[#555555]/30 rounded-2xl p-6"
+                className="bg-[#555555]/30 rounded-2xl p-6 flex flex-col justify-between"
                 key={el.id}
                 onClick={() => setIsProject(true)}
               >
-                <p className="text-[1rem] lg:text-xl">{el.title}</p>
-                <Badge size="xs" className="mt-1 mb-4 bg-red-500 text-white">
-                  {el.type}
-                </Badge>
-                <p className="text-[0.8rem] text-[#A5A5A5] mb-12">
-                  {el.description}
-                </p>
+                <div>
+                  <p className="text-[1rem] lg:text-xl">{el.title}</p>
+                  <Badge size="xs" className="mt-1 mb-4 bg-red-500 text-white">
+                    {el.type}
+                  </Badge>
+                  <p className="text-[0.8rem] text-[#A5A5A5] mb-12">
+                    {el.description}
+                  </p>
+                </div>
                 <div className="flex gap-3">
                   {el.skills.map((skill, idx) => (
                     <div
-                      className="bg-white rounded-[3px] w-7 aspect-square"
+                      className="rounded-[3px] w-7 aspect-square relative bg-white"
                       key={idx}
-                    ></div>
+                    >
+                      <Image
+                        fill
+                        src={`/logo/${skill.image}-logo.png`}
+                        alt={`${skill.image} 로고 이미지`}
+                      />
+                    </div>
                   ))}
                 </div>
               </div>
@@ -145,7 +154,7 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section id="ending">
+      <Section id="ending" isAnimation={false}>
         <div className="w-full flex flex-col items-center justify-center">
           <p className="text-center text-[1rem] lg:text-xl mb-10">
             고객들에게 보다 더 좋은 서비스를 제공하기 위해,

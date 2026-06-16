@@ -101,7 +101,11 @@ export const projects: Project[] = [
     skills: [
       {
         name: "React",
-        image: "",
+        image: "react",
+      },
+      {
+        name: "Next.js",
+        image: "nextjs",
       },
     ],
     details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
@@ -116,8 +120,12 @@ export const projects: Project[] = [
     link: "",
     skills: [
       {
+        name: "React",
+        image: "react",
+      },
+      {
         name: "Next.js",
-        image: "",
+        image: "nextjs",
       },
     ],
     details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
@@ -132,8 +140,12 @@ export const projects: Project[] = [
     link: "",
     skills: [
       {
+        name: "React",
+        image: "react",
+      },
+      {
         name: "Next.js",
-        image: "",
+        image: "nextjs",
       },
     ],
     details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
@@ -148,8 +160,12 @@ export const projects: Project[] = [
     link: "",
     skills: [
       {
+        name: "React",
+        image: "react",
+      },
+      {
         name: "Next.js",
-        image: "",
+        image: "nextjs",
       },
     ],
     details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
@@ -163,8 +179,12 @@ export const projects: Project[] = [
     link: "",
     skills: [
       {
+        name: "React",
+        image: "react",
+      },
+      {
         name: "Next.js",
-        image: "",
+        image: "nextjs",
       },
     ],
     details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
