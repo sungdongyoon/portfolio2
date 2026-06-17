@@ -1,18 +1,14 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Badge from "./components/Badge";
 import SectionTitle from "./components/SectionTitle";
 import { career, coreValues, projects, skills } from "./constants/portfolio";
-import * as motion from "motion/react-client";
-import ProjectModal from "./components/ProjectModal";
-import { useInView, useScroll } from "motion/react";
-import { sectionAnimation } from "./constants/animations";
 import Section from "./components/Section";
 import Image from "next/image";
 
 export default function Home() {
-  const [isWork, setIsWork] = useState<boolean>(false);
+  const [isWork, setIsWork] = useState<boolean>(true);
   const [isProject, setIsProject] = useState<boolean>(false);
 
   return (
@@ -22,7 +18,7 @@ export default function Home() {
           <h1 className="text-[clamp(2.5rem,6vw,4rem)] font-bold">
             안녕하세요,
             <br /> 프론트엔드 개발자
-            <br /> <em className="text-orange-400">윤동성</em>
+            <br /> <em className="text-main-text">윤동성</em>
             입니다.
           </h1>
         </div>
@@ -37,7 +33,7 @@ export default function Home() {
                 <p className="text-[1rem] md:text-xl font-semibold">
                   {el.title}
                 </p>
-                <p className="text-[#A5A5A5] text-[0.8rem] md:text-[1rem]">
+                <p className="text-sub-text text-[0.8rem] md:text-[1rem]">
                   {el.content}
                 </p>
               </div>
@@ -54,7 +50,7 @@ export default function Home() {
                 <Badge size="md" className="absolute bottom-4/5">
                   {el.category}
                 </Badge>
-                <div className="w-full bg-[#555555]/30 py-5 lg:py-7 px-5 lg:px-10 rounded-[40px]">
+                <div className="w-full bg-overlay/30 py-5 lg:py-7 px-5 lg:px-10 rounded-[40px]">
                   <p className="text-center text-[clamp(0.6rem,3.5vw,1rem)]">
                     {el.content}
                   </p>
@@ -73,7 +69,7 @@ export default function Home() {
                 className="relative border-t border-white mb-20"
                 key={career.id}
               >
-                <p className="absolute bg-[#082032] py-1 px-5 -top-4 left-1/2 -translate-x-1/2">
+                <p className="absolute bg-main-bg py-1 px-5 -top-4 left-1/2 -translate-x-1/2">
                   {career.title}
                 </p>
                 <ul className="pt-10 flex flex-col gap-10">
@@ -87,19 +83,19 @@ export default function Home() {
                       </p>
                       <div className="flex flex-col flex-2 gap-2 sm:gap-3">
                         <p className="text-2xl">{career.title}</p>
-                        <p className="text-[#A5A5A5] text-[0.7rem] sm:text-[0.8rem]">
+                        <p className="text-sub-text text-[0.7rem] sm:text-[0.8rem]">
                           {career.sub}
                         </p>
                         {career.work && (
                           <div>
                             <button
-                              className="text-orange-400 font-semibold text-[0.8rem] cursor-pointer"
+                              className="text-main-text font-semibold text-[0.8rem] cursor-pointer"
                               onClick={() => setIsWork(!isWork)}
                             >
                               ► 주요업무
                             </button>
                             {isWork && (
-                              <ul className="text-[0.8rem] bg-[#555555]/30 py-4 px-6 mt-3 rounded-2xl leading-6">
+                              <ul className="text-[0.8rem] bg-overlay/30 py-4 px-6 mt-3 rounded-2xl leading-6">
                                 {career.work.map((work, idx) => (
                                   <li key={idx}>- {work}</li>
                                 ))}
@@ -122,7 +118,7 @@ export default function Home() {
           <div className="w-full max-w-full md:max-w-[80%] lg:max-w-[60%] grid grid-cols-1 md:grid-cols-2 gap-5">
             {projects.map((el) => (
               <div
-                className="bg-[#555555]/30 rounded-2xl p-6 flex flex-col justify-between"
+                className="bg-overlay/30 rounded-2xl p-6 flex flex-col justify-between"
                 key={el.id}
                 onClick={() => setIsProject(true)}
               >
@@ -131,7 +127,7 @@ export default function Home() {
                   <Badge size="xs" className="mt-1 mb-4 bg-red-500 text-white">
                     {el.type}
                   </Badge>
-                  <p className="text-[0.8rem] text-[#A5A5A5] mb-12">
+                  <p className="text-[0.8rem] text-sub-text mb-12">
                     {el.description}
                   </p>
                 </div>

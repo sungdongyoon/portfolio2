@@ -16,7 +16,7 @@ const sizeClass = {
 const Badge = ({ children, size = "md", className }: BadgeType) => {
   return (
     <div
-      className={`inline-block bg-black text-orange-400 rounded-4xl py-1 px-3 ${sizeClass[size]} ${className}`}
+      className={`inline-block bg-black text-main-text rounded-4xl py-1 px-3 ${sizeClass[size]} ${className}`}
     >
       {children}
     </div>

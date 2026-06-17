@@ -2,8 +2,11 @@
 @import "tailwindcss-animated";
 
 @theme {
-  --color-nav: #082032;
-  --color-orange: #f87b1b;
+  /* 색상 */
+  --color-main-bg: #082032;
+  --color-main-text: #f87b1b;
+  --color-sub-text: #a5a5a5;
+  --color-overlay: #555555;
 
   /* --animate-wiggle: wiggle 1s ease-in-out infinite;
   @keyframes wiggle {
