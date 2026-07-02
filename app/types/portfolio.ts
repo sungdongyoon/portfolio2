@@ -1,4 +1,4 @@
-export interface CoreValue {
+export interface Values {
   id: number;
   image: string;
   title: string;
@@ -8,7 +8,10 @@ export interface CoreValue {
 export interface Skills {
   id: number;
   category: string;
-  content: string;
+  skills: {
+    skill: string;
+    url: string;
+  }[];
 }
 
 export interface Career {

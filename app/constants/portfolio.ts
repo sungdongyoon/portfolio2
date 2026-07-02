@@ -1,6 +1,6 @@
-import { Career, CoreValue, Project, Skills } from "../types/portfolio";
+import { Career, Values, Project, Skills } from "../types/portfolio";
 
-export const coreValues: CoreValue[] = [
+export const values: Values[] = [
   {
     id: 1,
     image: "",
@@ -13,14 +13,14 @@ export const coreValues: CoreValue[] = [
     image: "",
     title: "근거있는 행동",
     content:
-      "추측이나 감에 의존하는 것보다 사실과 근거를 바탕으로 판단하고 행동하는 것을 중요하게 생각합니다. 명확한 이유와 근거를 바탕으로 소통할 때 팀원 간의 신뢰가 높아지고 더 나은 의사결정을 할 수 있다고 믿습니다.",
+      "추측이나 감에 의존하기보다, 사실과 근거를 바탕으로 판단하고 행동하려 합니다. 명확한 이유와 근거를 바탕으로 소통할 때 팀원 간의 신뢰가 높아지고 더 나은 의사결정으로 이어진다고 믿습니다.",
   },
   {
     id: 3,
     image: "",
     title: "책임감",
     content:
-      "민폐 끼치는 것을 싫어합니다. 때문에 저는 책임감을 갖고 맡은 일을 완수하기 위해 많은 고민을 하고 자기개발을 통해 부족한 부분을 개선하기 위해 노력합니다. 또한 동료의 도움이 필요할 경우 도움을 요청하여 더 나은 결과를 만들기 위해 노력합니다.",
+      "맡은 일은 끝까지 해내기 위해 깊이 고민하고, 부족한 부분은 꾸준히 학습하며 개선하려 합니다. 혼자 해결하기 어려운 문제는 적절한 시점에 도움을 요청하고, 더 나은 결과를 만들기 위해 동료와 함께 해결책을 찾아갑니다.",
   },
 ];
 
@@ -28,17 +28,43 @@ export const skills: Skills[] = [
   {
     id: 1,
     category: "FRONTEND",
-    content: "Javascript · Typescript · React · Next.js",
+    skills: [
+      {
+        skill: "JavaScript",
+        url: "js-logo.png",
+      },
+      {
+        skill: "TypeScript",
+        url: "ts-logo.png",
+      },
+      {
+        skill: "React",
+        url: "react-logo.png",
+      },
+      {
+        skill: "Next.js",
+        url: "nextjs-logo.png",
+      },
+    ],
   },
   {
     id: 2,
     category: "BACKEND",
-    content: "SQL · Supabase",
+    skills: [
+      { skill: "SQL", url: "" },
+      { skill: "Supabase", url: "" },
+    ],
   },
   {
     id: 3,
     category: "OTHERS",
-    content: "AWS S3 · AWS Amplify · Vercel · Github · Figma",
+    skills: [
+      { skill: "AWS S3", url: "" },
+      { skill: "AWS Amplify", url: "" },
+      { skill: "Vercel", url: "" },
+      { skill: "Github", url: "github-logo.png" },
+      { skill: "Figma", url: "" },
+    ],
   },
 ];
 
