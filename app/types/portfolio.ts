@@ -37,5 +37,6 @@ export interface Project {
   period: string;
   link: string;
   skills: { name: string; image: string }[];
-  details: string[];
+  role?: string;
+  result?: string;
 }

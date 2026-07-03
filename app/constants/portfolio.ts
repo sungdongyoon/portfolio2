@@ -134,14 +134,16 @@ export const projects: Project[] = [
         image: "nextjs",
       },
     ],
-    details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
+    role: "서비스 화면 개발 및 UI 구현, API 연동 및 데이터 가공 로직 처리, 유지보수 등 전체적인 개발 담당",
+    result:
+      "세일즈 팀 및 디자이너의 반복 업무 프로세스 개선을 통해 업무 효율성 향상에 기여",
   },
   {
     id: 2,
     title: "UI Components",
     type: "호텔스토리",
     description:
-      "사내 개발자용으로 모든 개발자들이 쉽고 간편하게 화면 작업을 할 수 있도록 제작한 UI 컴포넌트",
+      "사내 개발자용으로 UI 규칙과 컴포넌트를 만들어서 모든 개발자들이 쉽고 간편하게 화면 작업을 할 수 있도록 제작한 공통 UI 컴포넌트",
     period: "2024.05 ~ 상시",
     link: "",
     skills: [
@@ -154,7 +156,9 @@ export const projects: Project[] = [
         image: "nextjs",
       },
     ],
-    details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
+    role: "공통 UI 컴포넌트 기획 및 개발, 사용 가이드 문서화 및 버전 관리, 아이콘/컴포넌트 개선 및 업데이트",
+    result:
+      "백엔드 개발자의 화면 구현 진입장벽을 낮추고, 반복적인 UI 문의 감소 및 협업 효율 개선에 기여",
   },
   {
     id: 3,
@@ -174,7 +178,9 @@ export const projects: Project[] = [
         image: "nextjs",
       },
     ],
-    details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
+    role: "관리자 화면 개발 및 API 연동, 운영 이슈 개선 및 추가 요청사항 적용",
+    result:
+      "티켓 관리 기능 구축을 통해 티켓 신규 사업 확장의 발판이 되었으며, TMS를 이용하는 숙소의 업무 효율성 향상에 기여",
   },
   {
     id: 4,
@@ -194,15 +200,18 @@ export const projects: Project[] = [
         image: "nextjs",
       },
     ],
-    details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
+    role: "예약 시스템 화면 개발 및 API 연동",
+    result:
+      "MRI 사이판(켄싱턴, PIC, 코럴오션)과 제휴를 맺어 기존 사업 대비 높은 수수료율의 예약 매출 확보에 기여",
   },
   {
     id: 5,
-    title: "개인 프로젝트 1",
+    title: "Bean Bridge",
     type: "개인",
-    description: "개인 프로젝트 1입니다.",
-    period: "2026.06 ~ 2026.06",
-    link: "",
+    description:
+      "주요 업체의 생두 정보를 한번에 확인할 수 있는 사이드 프로젝트",
+    period: "2026.06 ~ 2026.07",
+    link: "https://bean-bridge.vercel.app/",
     skills: [
       {
         name: "React",
@@ -213,6 +222,5 @@ export const projects: Project[] = [
         image: "nextjs",
       },
     ],
-    details: ["상세 내용 1", "상세 내용 2", "상세 내용 3"],
   },
 ];

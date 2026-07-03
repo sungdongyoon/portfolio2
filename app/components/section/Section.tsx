@@ -1,6 +1,6 @@
 import React from "react";
 import * as motion from "motion/react-client";
-import { sectionAnimation } from "../constants/animations";
+import { sectionAnimation } from "../../constants/animations";
 
 const Section = ({
   children,
