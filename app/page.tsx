@@ -4,6 +4,7 @@ import CareerSection from "./components/section/CareerSection";
 import ProjectSection from "./components/section/ProjectSection";
 import IntroSection from "./components/section/IntroSection";
 import EndingSection from "./components/section/EndingSection";
+import SideMenu from "./components/SideMenu";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <CareerSection />
       <ProjectSection />
       <EndingSection />
-      {/* <SideMenu /> */}
+      <SideMenu />
     </main>
   );
 }

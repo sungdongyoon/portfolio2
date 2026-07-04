@@ -16,7 +16,7 @@ const ValueSection = () => {
               className="flex flex-col gap-3 border border-overlay/50 bg-overlay/10 px-7 py-5 rounded-md"
             >
               <p className="text-[1rem] md:text-xl font-semibold">{el.title}</p>
-              <hr className="mb-3 text-gray-700" />
+              <hr className="text-gray-700" />
               <p className="text-sub-text text-[0.8rem] md:text-[1rem]">
                 {el.content}
               </p>
