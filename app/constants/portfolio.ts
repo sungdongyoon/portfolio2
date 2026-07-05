@@ -47,23 +47,24 @@ export const skills: Skills[] = [
       },
     ],
   },
-  {
-    id: 2,
-    category: "BACKEND",
-    skills: [
-      { skill: "SQL", url: "" },
-      { skill: "Supabase", url: "" },
-    ],
-  },
+  // {
+  //   id: 2,
+  //   category: "BACKEND",
+  //   skills: [
+  //     { skill: "SQL", url: "" },
+  //     { skill: "Supabase", url: "" },
+  //   ],
+  // },
   {
     id: 3,
     category: "OTHERS",
     skills: [
-      { skill: "AWS S3", url: "" },
-      { skill: "AWS Amplify", url: "" },
-      { skill: "Vercel", url: "" },
+      { skill: "AWS S3", url: "aws-s3.png" },
+      { skill: "AWS Amplify", url: "aws-amplify.png" },
+      { skill: "Supabase", url: "supabase-logo.png" },
+      { skill: "Vercel", url: "vercel-logo.png" },
       { skill: "Github", url: "github-logo.png" },
-      { skill: "Figma", url: "" },
+      { skill: "Figma", url: "figma-logo.png" },
     ],
   },
 ];

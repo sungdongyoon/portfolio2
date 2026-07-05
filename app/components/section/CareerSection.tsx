@@ -1,12 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
+
+import { career } from "../../constants/portfolio";
 import Section from "./Section";
 import SectionTitle from "./SectionTitle";
-import { career } from "../../constants/portfolio";
+import {
+  FaCheck,
+  FaChevronDown,
+  FaChevronRight,
+  FaChevronUp,
+} from "react-icons/fa6";
 
 const CareerSection = () => {
   const [isWork, setIsWork] = useState<boolean>(true);
+
   return (
     <Section id="career" isAnimation>
       <div className="w-full flex flex-col items-center justify-center">
@@ -37,10 +45,12 @@ const CareerSection = () => {
                       {career.work && (
                         <div>
                           <button
-                            className="text-main-text font-semibold text-[0.8rem] cursor-pointer"
-                            onClick={() => setIsWork(!isWork)}
+                            className="flex items-center gap-2 text-main-text font-semibold text-[0.8rem]"
+                            // onClick={() => setIsWork(!isWork)}
                           >
-                            ► 주요업무
+                            {/* {isWork ? <FaChevronUp /> : <FaChevronDown />} */}
+                            <FaCheck />
+                            주요업무
                           </button>
                           {isWork && (
                             <ul className="text-[0.8rem] bg-overlay/10 border border-overlay/50 py-4 px-6 mt-3 rounded-md leading-6">

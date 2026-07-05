@@ -19,15 +19,15 @@ const SkillSection = () => {
               <div className="w-full flex gap-3 bg-overlay/10 py-5 lg:py-7 px-5 lg:px-10 border border-overlay/50 rounded-md">
                 {el.skills.map((skill, idx) => (
                   <div
-                    className="flex items-center gap-1 text-center font-semibold text-[clamp(0.6rem,3vw,0.8rem)] bg-white text-black px-3 py-1 rounded-sm"
+                    className="flex items-center gap-1 text-center font-semibold text-[clamp(0.6rem,3vw,0.8rem)] bg-white text-black px-2 py-1 rounded-sm"
                     key={idx}
                   >
                     {skill.url && (
                       <Image
                         src={`/logo/${skill.url}`}
                         alt={`${skill.skill} 로고`}
-                        width={25}
-                        height={25}
+                        width={20}
+                        height={20}
                       />
                     )}
                     <span>{skill.skill}</span>
