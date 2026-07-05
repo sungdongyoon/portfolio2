@@ -69,7 +69,7 @@ const SideMenu = () => {
   if (isIntro) return null;
 
   return (
-    <div className="fixed top-1/2 left-10 -translate-y-1/2">
+    <div className="hidden xl:block fixed top-1/2 left-10 -translate-y-1/2">
       <div className="py-5 px-8 rounded-md flex items-start flex-col gap-3">
         {visibleMenuItems.map((menu) => {
           const isActive = activeSection === menu.id;

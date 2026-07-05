@@ -13,10 +13,13 @@ const SkillSection = () => {
         <div className="w-full max-w-full flex flex-col gap-15 mt-10">
           {skills.map((el) => (
             <div className="flex flex-col items-center relative" key={el.id}>
-              <Badge size="sm" className="absolute bottom-4/5">
+              <Badge
+                size="sm"
+                className="absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2"
+              >
                 {el.category}
               </Badge>
-              <div className="w-full flex gap-3 bg-overlay/10 py-5 lg:py-7 px-5 lg:px-10 border border-overlay/50 rounded-md">
+              <div className="w-full flex gap-3 flex-wrap bg-overlay/10 py-5 lg:py-7 px-5 lg:px-10 border border-overlay/50 rounded-md">
                 {el.skills.map((skill, idx) => (
                   <div
                     className="flex items-center gap-1 text-center font-semibold text-[clamp(0.6rem,3vw,0.8rem)] bg-white text-black px-2 py-1 rounded-sm"
