@@ -30,6 +30,14 @@ export const skills: Skills[] = [
     category: "FRONTEND",
     skills: [
       {
+        skill: "HTML",
+        url: "html-logo.png",
+      },
+      {
+        skill: "CSS",
+        url: "css-logo.png",
+      },
+      {
         skill: "JavaScript",
         url: "js-logo.png",
       },
@@ -131,9 +139,35 @@ export const projects: Project[] = [
         image: "react",
       },
       {
-        name: "Next.js",
-        image: "nextjs",
+        name: "SASS",
+        image: "sass",
       },
+      {
+        name: "Recoil",
+        image: "recoil",
+      },
+      {
+        name: "React Beautiful dnd",
+        image: "",
+      },
+      {
+        name: "React Kakao-maps-sdk",
+        image: "",
+      },
+      {
+        name: "html2canvas",
+        image: "",
+      },
+      {
+        name: "AWS Amplify",
+        image: "aws-amplify",
+      },
+    ],
+    content: [
+      "판매 숙소의 분위기에 맞춰 선택할 수 있는 4가지 테마를 제공하고. 드래그 앤 드롭으로 상세페이지 섹션과 이벤트용 배너 이미지 순서를 조정할 수 있도록 구현했습니다.",
+      "서버에 저장된 숙소 API를 연동해 템플릿 사용 시 숙소 정보와 이미지를 자동으로 불러오도록 구성했습니다.",
+      "테마 선택, 이미지 선택, 섹션 순서 변경만으로 상세페이지를 빠르게 구성하고 판매 사이트 업로드까지 이어질 수 있도록 제작했습니다.",
+      "AWS Amplify 기반 배포 환경을 구성하고 프론트엔드 애플리케이션을 관리했습니다.",
     ],
     role: "서비스 화면 개발 및 UI 구현, API 연동 및 데이터 가공 로직 처리, 유지보수 등 전체적인 개발 담당",
     result:
@@ -144,18 +178,32 @@ export const projects: Project[] = [
     title: "UI Components",
     type: "호텔스토리",
     description:
-      "사내 개발자용으로 UI 규칙과 컴포넌트를 만들어서 모든 개발자들이 쉽고 간편하게 화면 작업을 할 수 있도록 제작한 공통 UI 컴포넌트",
+      "사내 개발자용으로 UI 규칙과 컴포넌트, 아이콘을 만들어서 모든 개발자들이 쉽고 간편하게 화면 작업을 할 수 있도록 제작한 공통 UI 컴포넌트",
     period: "2024.05 ~ 상시",
     link: "",
     skills: [
       {
-        name: "React",
-        image: "react",
-      },
-      {
         name: "Next.js",
         image: "nextjs",
       },
+      {
+        name: "SASS",
+        image: "sass",
+      },
+      {
+        name: "Figma",
+        image: "figma",
+      },
+      {
+        name: "AWS Amplify",
+        image: "aws-amplify",
+      },
+    ],
+    content: [
+      "Bootstrap 기반의 공통 UI 컴포넌트와 사용 규칙을 정의해 일관된 화면 구성을 지원했습니다.",
+      "아이콘 및 컴포넌트 리소스를 AWS S3에서 버전별로 관리하여 필요한 버전을 사용할 수 있도록 구성했습니다.",
+      "React와 PHP 환경 모두 사용 가능하도록 설계했습니다.",
+      "AWS Amplify 기반 배포 환경을 구성하고 프론트엔드 애플리케이션을 관리했습니다.",
     ],
     role: "공통 UI 컴포넌트 기획 및 개발, 사용 가이드 문서화 및 버전 관리, 아이콘/컴포넌트 개선 및 업데이트",
     result:
@@ -171,13 +219,38 @@ export const projects: Project[] = [
     link: "",
     skills: [
       {
-        name: "React",
-        image: "react",
-      },
-      {
         name: "Next.js",
         image: "nextjs",
       },
+      {
+        name: "Axios",
+        image: "axios",
+      },
+      {
+        name: "SASS",
+        image: "sass",
+      },
+      {
+        name: "Redux-Toolkit",
+        image: "redux",
+      },
+      {
+        name: "Next-Auth",
+        image: "next-auth",
+      },
+      {
+        name: "Postman",
+        image: "postman",
+      },
+      {
+        name: "AWS Amplify",
+        image: "aws-amplify",
+      },
+    ],
+    content: [
+      "NextAuth를 활용하여 회원가입 및 로그인 기능 구현, 사용자 인증 흐름을 구성했습니다.",
+      "관리자 대시보드에 필요한 유저, 예약, 상품, 정산 데이터를 API로 연동하고 화면에 맞게 가공하여 렌더링했습니다.",
+      "AWS Amplify로 배포 환경을 구성하고 환경변수로를 활용하여 개발/운영 환경을 분리 했습니다.",
     ],
     role: "관리자 화면 개발 및 API 연동, 운영 이슈 개선 및 추가 요청사항 적용",
     result:
@@ -193,13 +266,48 @@ export const projects: Project[] = [
     link: "",
     skills: [
       {
-        name: "React",
-        image: "react",
-      },
-      {
         name: "Next.js",
         image: "nextjs",
       },
+      {
+        name: "Axios",
+        image: "axios",
+      },
+      {
+        name: "SASS",
+        image: "sass",
+      },
+      {
+        name: "Redux-Toolkit",
+        image: "redux",
+      },
+      {
+        name: "Next-Auth",
+        image: "next-auth",
+      },
+      {
+        name: "React Kakao-maps-sdk",
+        image: "",
+      },
+      {
+        name: "Postman",
+        image: "postman",
+      },
+      {
+        name: "Docker",
+        image: "docker",
+      },
+      {
+        name: "AWS Amplify",
+        image: "aws-amplify",
+      },
+    ],
+    content: [
+      "숙소, 일정, 객실 상품, 예약자 정보를 선택하고 예약 완료까지 이어지는 사용자 예약 흐름을 구현했습니다.",
+      "숙소 정보 조회, 객실 정보 확인, 예약 정보 생성 등 필요한 API 통신을 했습니다.",
+      "NextAuth를 활용하여 사용자 인증 기능을 구현했습니다.",
+      "Toss Payments PG를 연동하여 객실 상품 결제 기능을 구현했습니다.",
+      "AWS Amplify로 배포 환경을 구성하고 환경변수로를 활용하여 개발/운영 환경을 분리 했습니다.",
     ],
     role: "예약 시스템 화면 개발 및 API 연동",
     result:
@@ -215,13 +323,27 @@ export const projects: Project[] = [
     link: "https://bean-bridge.vercel.app/",
     skills: [
       {
-        name: "React",
-        image: "react",
-      },
-      {
         name: "Next.js",
         image: "nextjs",
       },
+      {
+        name: "Typescript",
+        image: "ts",
+      },
+      {
+        name: "Tailwind CSS",
+        image: "tailwindcss",
+      },
+      {
+        name: "Shadcn",
+        image: "shadcn",
+      },
+    ],
+    content: [
+      "Tailwind CSS와 Shadcn UI를 활용하여 빠르고 효율적으로 UI 구성했습니다.",
+      "샘플 상품 데이터를 기반으로 테이블을 렌더링했습니다.",
+      "URL params 기반 검색 상태 관리, localstorage 기반 찜하기 기능을 구현했습니다.",
+      "next-intl 기반 다국어 처리, next-themes 기반 테마 전환을 구현했습니다.",
     ],
   },
 ];
