@@ -70,7 +70,7 @@ const SideMenu = () => {
 
   return (
     <div className="fixed top-5 xl:top-1/2 left-5 xl:left-10 xl:-translate-y-1/2 ">
-      <div className="py-3 px-10 rounded-md flex items-start xl:flex-col gap-10 xl:gap-3 bg-[#3A495A]">
+      <div className="py-3 px-10 rounded-md flex items-start xl:flex-col gap-10 xl:gap-3 bg-overlay2 xl:bg-transparent">
         {visibleMenuItems.map((menu) => {
           const isActive = activeSection === menu.id;
 
