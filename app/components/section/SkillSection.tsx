@@ -28,11 +28,12 @@ const SkillSection = () => {
                     {skill.url && (
                       <Image
                         src={`/logo/${skill.url}`}
-                        alt={`${skill.skill} 로고`}
+                        alt=""
                         width={20}
                         height={20}
                       />
                     )}
+                    {skill.url}
                     <span>{skill.skill}</span>
                   </div>
                 ))}
