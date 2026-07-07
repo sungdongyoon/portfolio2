@@ -33,7 +33,6 @@ const SkillSection = () => {
                         height={20}
                       />
                     )}
-                    {skill.url}
                     <span>{skill.skill}</span>
                   </div>
                 ))}

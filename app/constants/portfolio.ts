@@ -67,8 +67,8 @@ export const skills: Skills[] = [
     id: 3,
     category: "OTHERS",
     skills: [
-      { skill: "AWS S3", url: "aws-s3.png" },
-      { skill: "AWS Amplify", url: "aws-amplify.png" },
+      { skill: "AWS S3", url: "aws-s3-logo.png" },
+      { skill: "AWS Amplify", url: "aws-amplify-logo.png" },
       { skill: "Supabase", url: "supabase-logo.png" },
       { skill: "Vercel", url: "vercel-logo.png" },
       { skill: "Github", url: "github-logo.png" },
