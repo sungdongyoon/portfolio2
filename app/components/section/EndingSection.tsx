@@ -9,7 +9,7 @@ const EndingSection = () => {
     <Section id="ending" isAnimation={false}>
       <div className="w-full flex flex-col items-center justify-center">
         <SectionTitle>Contact</SectionTitle>
-        <div className="my-10 flex gap-10 border border-overlay/50 bg-overlay/10 px-7 py-5 rounded-md">
+        <div className="my-10 flex gap-10 flex-wrap items-center justify-center border border-overlay/50 bg-overlay/10 px-7 py-5 rounded-md">
           <Link
             href="https://github.com/sungdongyoon"
             className="flex flex-col gap-3 items-center"

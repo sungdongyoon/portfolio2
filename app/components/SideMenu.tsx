@@ -69,8 +69,8 @@ const SideMenu = () => {
   if (isIntro) return null;
 
   return (
-    <div className="fixed top-5 xl:top-1/2 left-5 xl:left-10 xl:-translate-y-1/2 ">
-      <div className="py-3 px-10 rounded-md flex items-start xl:flex-col gap-10 xl:gap-3 bg-overlay2 xl:bg-transparent">
+    <div className="fixed top-5 xl:top-1/2 left-5 xl:left-10 xl:-translate-y-1/2 z-20">
+      <div className="py-3 px-5 sm:px-10 rounded-md flex items-start xl:flex-col gap-3 sm:gap-8 xl:gap-3 bg-overlay2 xl:bg-transparent">
         {visibleMenuItems.map((menu) => {
           const isActive = activeSection === menu.id;
 
@@ -78,10 +78,10 @@ const SideMenu = () => {
             <button
               key={menu.id}
               onClick={() => handleClickScroll(menu.id)}
-              className={`cursor-pointer text-[0.9rem] relative ${isActive ? "text-white font-semibold" : "text-sub-text"}`}
+              className={`cursor-pointer text-[0.6rem] sm:text-[0.8rem] relative ${isActive ? "text-main-text xl:text-white font-semibold" : "text-sub-text"}`}
             >
               <span
-                className={`absolute top-1/2 -left-4 -translate-y-1/2 h-4 w-1 rounded-full bg-main-text transition-opacity ${isActive ? "opacity-100" : "opacity-0"}`}
+                className={`hidden xl:block absolute top-1/2 -left-4 -translate-y-1/2 h-4 w-1 rounded-full bg-main-text transition-opacity ${isActive ? "opacity-100" : "opacity-0"}`}
               />
 
               {menu.label}
